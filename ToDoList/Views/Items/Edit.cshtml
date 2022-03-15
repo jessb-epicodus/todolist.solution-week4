@@ -16,7 +16,7 @@
     @Html.EditorFor(model => model.Description)
 
     @Html.LabelFor(model => model.Date)
-    @Html.EditorFor(model => model.Date, new {@type = "date"})
+    @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", type="date" }})
 
     @Html.Label("Select category")
     @Html.DropDownList("CategoryId")
@@ -26,3 +26,5 @@
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
+
+https://docs.microsoft.com/en-us/dotnet/api/system.web.mvc.html.editorextensions.editorfor?view=aspnet-mvc-5.2

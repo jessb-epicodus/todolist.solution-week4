@@ -12,7 +12,9 @@
     @Html.TextBoxFor(model => model.Description, new {@class = "form-control", placeholder = "Description", required="required"})
 
     @Html.LabelFor(model => model.Date)
-    @Html.TextBoxFor(model => model.Date, new {@type = "date"})
+    @Html.TextBoxFor(model => model.Date, new {@type = "date", @class="form-control"}) 
+    <!-- didn't need to change angything here, but updated details and index of items-->
+    
     
     @Html.Label("Select category")
     @Html.DropDownList("CategoryId")
@@ -21,3 +23,10 @@
 }
 <p>@Html.ActionLink("Show all items", "Index")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
+
+@*
+https://docs.microsoft.com/en-us/dotnet/api/system.web.mvc.html.inputextensions.textboxfor?view=aspnet-mvc-5.2
+
+
+
+public static System.Web.Mvc.MvcHtmlString TextBoxFor<TModel,TProperty> (this System.Web.Mvc.HtmlHelper<TModel> htmlHelper, System.Linq.Expressions.Expression<Func<TModel,TProperty>> expression, string format); *@

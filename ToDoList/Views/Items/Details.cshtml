@@ -17,7 +17,7 @@ else
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
-    <li>Date: @Html.DisplayFor(model => model.Date) <br>
+    <li>Date: @Model.Date.ToString("d")<br>
     Category: @join.Category.Name</li>
     @using (Html.BeginForm("DeleteCategory", "Items"))
     {
