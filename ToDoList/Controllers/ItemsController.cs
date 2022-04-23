@@ -113,7 +113,7 @@ namespace ToDoList.Controllers
     }
 
     [HttpPost]
-    public ActionResult UpdateStatus(int id) //hidden itemId from form
+    public ActionResult UpdateStatus(int id)
     {
       var thisItem = _db.Items.FirstOrDefault(item => item.ItemId == id);
       thisItem.Status = true;

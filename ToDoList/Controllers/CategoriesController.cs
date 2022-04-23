@@ -20,7 +20,6 @@ namespace ToDoList.Controllers
       List<Category> model = _db.Categories.ToList();
       return View(model);
     }
-
     public ActionResult Create()
     {
       return View();
